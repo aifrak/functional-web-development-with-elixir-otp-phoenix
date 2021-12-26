@@ -18,6 +18,7 @@ erl_crash.dump
 *.ez
 *.beam
 config/*.secret.exs
+islands_engine-*.tar
 
 # ElixirLS (VSCode extension)
 .elixir_ls/
