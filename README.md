@@ -1,2 +1,3 @@
-# functional-web-development-with-elixir-otp-phoenix
+# Functional Web Development with Elixir, OTP, and Phoenix
+
 Code from 'Functional Web Development with Elixir, OTP, and Phoenix'.
