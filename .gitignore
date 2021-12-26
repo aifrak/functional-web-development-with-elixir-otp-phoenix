@@ -1,10 +1,23 @@
-/_build
-/cover
-/deps
-/doc
-/.fetch
+# Local history (VSCode extension)
+.history/
+
+# NodeJS
+node_modules/
+npm_cache/
+
+# Docker compose
+docker-compose.override.yml
+
+# Elixir
+_build/
+cover/
+deps/
+doc/
+.fetch/
 erl_crash.dump
 *.ez
 *.beam
-/config/*.secret.exs
+config/*.secret.exs
+
+# ElixirLS (VSCode extension)
 .elixir_ls/

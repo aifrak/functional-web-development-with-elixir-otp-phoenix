@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    // Elixir
+    "jakebecker.elixir-ls"
+  ],
+
+  "unwantedRecommendations": []
+}

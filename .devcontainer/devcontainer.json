@@ -1,0 +1,14 @@
+{
+  "name": "functional-web-development-with-elixir-otp-phoenix",
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "../docker-compose.dev.yml",
+    "docker-compose.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/app",
+  "extensions": [
+    // Elixir
+    "jakebecker.elixir-ls"
+  ]
+}

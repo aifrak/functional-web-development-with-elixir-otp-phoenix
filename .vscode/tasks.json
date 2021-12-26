@@ -1,0 +1,232 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    /* ———————————————————————————————————————————— */
+    /*                  Application                 */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "format",
+      "type": "shell",
+      "command": "./run",
+      "args": ["format"],
+      "problemMatcher": [],
+      "detail": "Format code of the whole project"
+    },
+    {
+      "label": "install-deps",
+      "type": "shell",
+      "command": "./run",
+      "args": ["install-deps"],
+      "problemMatcher": [],
+      "detail": "Install all dependencies"
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["lint"],
+      "problemMatcher": [],
+      "detail": "Lint the whole project"
+    },
+    {
+      "label": "lint-staged",
+      "type": "shell",
+      "command": "./run",
+      "args": ["lint-staged"],
+      "problemMatcher": [],
+      "detail": "Lint staged files"
+    },
+    {
+      "label": "pre-commit",
+      "type": "shell",
+      "command": "./run",
+      "args": ["pre-commit"],
+      "problemMatcher": [],
+      "detail": "Lint staged files and test the whole project"
+    },
+    {
+      "label": "test",
+      "type": "shell",
+      "command": "./run",
+      "args": ["test"],
+      "problemMatcher": [],
+      "detail": "Test and lint the whole project"
+    },
+    /* ———————————————————————————————————————————— */
+    /*                docker-compose                */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "dc:build",
+      "type": "shell",
+      "command": "./run ${input:dcOpts} dc:build",
+      "problemMatcher": [],
+      "detail": "Build all docker services"
+    },
+    {
+      "label": "dc:console",
+      "type": "shell",
+      "command": "./run ${input:dcOpts} dc:console",
+      "problemMatcher": [],
+      "detail": "Build, start, up all services and console of 'app' docker service"
+    },
+    {
+      "label": "dc:exec",
+      "type": "shell",
+      "command": "./run ${input:dcOpts} dc:exec",
+      "problemMatcher": [],
+      "detail": "Execute a command in a 'app' docker service"
+    },
+    {
+      "label": "dc:run",
+      "type": "shell",
+      "command": "./run ${input:dcOpts} dc:run ${input:cmd}",
+      "problemMatcher": [],
+      "detail": "Run a command inside the 'app' docker service and remove stopped containers"
+    },
+    {
+      "label": "dc:up",
+      "type": "shell",
+      "command": "./run ${input:dcOpts} dc:up",
+      "problemMatcher": [],
+      "detail": "Starts all docker services"
+    },
+    /* ———————————————————————————————————————————— */
+    /*                    Elixir                    */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "elixir:format",
+      "type": "shell",
+      "command": "./run",
+      "args": ["elixir:format"],
+      "problemMatcher": [],
+      "detail": "Format Elixir files"
+    },
+    {
+      "label": "elixir:lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["elixir:lint"],
+      "problemMatcher": [],
+      "detail": "Lint Elixir files"
+    },
+    /* ———————————————————————————————————————————— */
+    /*                  Elixir EEx                  */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "elixir:eex:format",
+      "type": "shell",
+      "command": "./run",
+      "args": ["elixir:eex:format"],
+      "problemMatcher": [],
+      "detail": "Format Embedded Elixir files"
+    },
+    {
+      "label": "elixir:eex:lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["elixir:eex:lint"],
+      "problemMatcher": [],
+      "detail": "Lint Embedded Elixir files"
+    },
+    /* ———————————————————————————————————————————— */
+    /*                     Shell                    */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "shell:format",
+      "type": "shell",
+      "command": "./run",
+      "args": ["shell:format"],
+      "problemMatcher": [],
+      "detail": "Format Shell scripts"
+    },
+    {
+      "label": "shell:lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["shell:lint"],
+      "problemMatcher": [],
+      "detail": "Lint Shell scripts"
+    },
+    /* ———————————————————————————————————————————— */
+    /*                  Dockerfile                  */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "dockerfile:format",
+      "type": "shell",
+      "command": "./run",
+      "args": ["dockerfile:format"],
+      "problemMatcher": [],
+      "detail": "Format all Dockerfiles"
+    },
+    {
+      "label": "dockerfile:lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["dockerfile:lint"],
+      "problemMatcher": [],
+      "detail": "Lint all Dockerfiles"
+    },
+    /* ———————————————————————————————————————————— */
+    /*             CSS, SCSS, SASS, LESS            */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "css:format",
+      "type": "shell",
+      "command": "./run",
+      "args": ["css:format "],
+      "problemMatcher": [],
+      "detail": "Format CSS, SCSS, SASS, LESS and any files containing CSS"
+    },
+    {
+      "label": "css:lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["css:lint "],
+      "problemMatcher": [],
+      "detail": "Lint CSS, SCSS, SASS, LESS and any files containing CSS"
+    },
+    /* ———————————————————————————————————————————— */
+    /*                     HTML                     */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "html:lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["html:lint"],
+      "problemMatcher": [],
+      "detail": "Lint HTML files and templates"
+    },
+    /* ———————————————————————————————————————————— */
+    /*                  Javascript                  */
+    /* ———————————————————————————————————————————— */
+    {
+      "label": "js:format",
+      "type": "shell",
+      "command": "./run",
+      "args": ["js:format"],
+      "problemMatcher": [],
+      "detail": "Format JS files and any files containing Javascript"
+    },
+    {
+      "label": "js:lint",
+      "type": "shell",
+      "command": "./run",
+      "args": ["js:lint"],
+      "problemMatcher": [],
+      "detail": "Lint JS files and any files containing Javascript"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "cmd",
+      "type": "promptString",
+      "description": "Command? (e.g. ./run test)"
+    },
+    {
+      "id": "dcOpts",
+      "type": "promptString",
+      "default": "--dc-dev",
+      "description": "Options? (e.g. --dc-dev, --dc-ci)"
+    }
+  ]
+}
