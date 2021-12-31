@@ -9,6 +9,9 @@
   "workspaceFolder": "/app",
   "extensions": [
     // Elixir
-    "jakebecker.elixir-ls"
+    "jakebecker.elixir-ls",
+
+    // Phoenix
+    "phoenixframework.phoenix"
   ]
 }

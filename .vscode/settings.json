@@ -1,10 +1,12 @@
 {
   // Editor:
-  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.rulers": [
+    80
+  ],
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-
   // Files:
   "files.watcherExclude": {
     "**/.git": true,
@@ -29,11 +31,9 @@
     "**/.git": true,
     "**/.history": true
   },
-
   // Search:
   "search.exclude": {
     "**/.git": true,
-    "**/.husky/_": true,
     // VSCode
     "**/.history": true,
     // NodeJS
@@ -51,15 +51,21 @@
     // Dialyzer
     "**/dialyzer/plts": true
   },
-
+  // Emmet:
+  "emmet.includeLanguages": {
+    "phoenix-heex": "html"
+  },
   // Override languages:
   "[elixir]": {
-    "editor.rulers": [98]
+    "editor.rulers": [
+      98
+    ]
   },
-  "[eex][html-eex][html]": {
-    "editor.rulers": [120]
+  "[html][eex][phoenix-heex]": {
+    "editor.rulers": [
+      120
+    ]
   },
-
   // VSCode icons:
   "vsicons.associations.files": [
     {
@@ -72,9 +78,11 @@
       "filename": true
     },
     {
-      "icon": "markdownlint",
-      "extensions": [".markdownlintignore"],
-      "filename": true
+      "icon": "eex",
+      "extensions": [
+        "heex",
+      ],
+      "filename": false
     }
-  ]
+  ],
 }

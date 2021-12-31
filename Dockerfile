@@ -18,11 +18,11 @@ ENV LANG=en_US.UTF-8
 RUN set -e \
   && apt-get update -qq \
   && apt-get install -y -qq --no-install-recommends \
-    git=1:2.25.1-* \
-    libodbc1=2.3.6-* \
-    libssl1.1=1.1.1f-* \
-    libsctp1=1.0.18+* \
-    locales=2.31-* \
+  git=1:2.25.1-* \
+  libodbc1=2.3.6-* \
+  libssl1.1=1.1.1f-* \
+  libsctp1=1.0.18+* \
+  locales=2.31-* \
   && sed -i "/${LANG}/s/^# //g" /etc/locale.gen \
   && locale-gen ${LANG} \
   && apt-get clean \
@@ -45,7 +45,7 @@ ENV APP_DIR=/app
 RUN set -e \
   && groupadd --gid ${USER_GID} ${GROUPNAME} \
   && useradd --uid ${USER_UID} --gid ${USER_GID} --shell /bin/bash \
-    --create-home ${USERNAME} \
+  --create-home ${USERNAME} \
   && mkdir ${APP_DIR} \
   && chown ${USERNAME}: ${APP_DIR}
 
@@ -105,10 +105,11 @@ RUN set -e \
   && export DEBIAN_FRONTEND=noninteractive \
   && apt-get update -qq \
   && apt-get install -y -qq --no-install-recommends \
-    ca-certificates=* \
-    gnupg2=* \
-    openssh-client=* \
-    sudo=* \
+  ca-certificates=* \
+  gnupg2=* \
+  inotify-tools=* \
+  openssh-client=* \
+  sudo=* \
   && echo "${USERNAME}" ALL=\(root\) NOPASSWD:ALL >/etc/sudoers.d/"${USERNAME}" \
   && chmod 0440 /etc/sudoers.d/"${USERNAME}" \
   && apt-get clean \
@@ -129,6 +130,6 @@ WORKDIR ${HOME}
 
 RUN set -e \
   && mkdir -p .vscode-server/extensions \
-    .vscode-server-insiders/extensions
+  .vscode-server-insiders/extensions
 
 WORKDIR ${APP_DIR}
